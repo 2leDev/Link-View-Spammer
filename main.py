@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 # Function to open the link specified number of times
@@ -8,7 +7,7 @@ def open_link_multiple_times(link, num_times):
     # Set up Chrome WebDriver
     chrome_options = Options()
     chrome_options.add_argument("--headless")  # Run Chrome in headless mode (no GUI)
-    service = Service('C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe')  # Default path for Windows
+    service = Service('/path/to/chromedriver.exe')  # Provide the path to your chromedriver executable
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     # Loop to open the link multiple times
